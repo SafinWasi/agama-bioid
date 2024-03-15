@@ -1,2 +1,5 @@
 Flow org.gluu.agama.bioid
      Basepath ""
+RRF "bioid.ftlh" 
+it_vtlnx = {success:false, error: "Your error message here"}
+Finish it_vtlnx
