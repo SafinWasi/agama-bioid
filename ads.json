@@ -15,6 +15,9 @@
             "biometrics"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "org.gluu.agama.bioid": {}
+        },
+        "name": "agama-bioid"
     }
 }
