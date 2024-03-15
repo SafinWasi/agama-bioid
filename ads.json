@@ -16,7 +16,13 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "org.gluu.agama.bioid": {}
+            "org.gluu.agama.bioid": {
+                "endpoint": "https://bws.bioid.com/extension/",
+                "appIdentifier": "",
+                "appSecret": "",
+                "storage": "",
+                "partition": ""
+            }
         },
         "name": "agama-bioid"
     }
