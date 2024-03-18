@@ -188,11 +188,11 @@
 
     <script type="text/javascript">
         // BEGIN OF CONFIGURATION
-        var token = "${token}";
+        var token = `${token}`;
         var returnURL = "${return_url!"abcdef"}";
         var state = "${state!"abcdef"}";
         var apiurl = "https://bws.bioid.com/extension/";
-        var decodedToken = atob(token);
+        var decodedToken = atob(token.split('.')[1]);
         var parsedToken = JSON.parse(decodedToken);
         var task = "verification";
         var trait = "Face,Periocular";
