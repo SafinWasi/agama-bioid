@@ -16,7 +16,14 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "org.gluu.agama.bioid": {}
+            "org.gluu.agama.bioid": {
+                "host": "https://<hostname>/jans-auth/fl/callback",
+                "endpoint": "https://bws.bioid.com/extension/",
+                "appIdentifier": "",
+                "appSecret": "",
+                "storage": "",
+                "partition": ""
+            }
         },
         "name": "agama-bioid"
     }
