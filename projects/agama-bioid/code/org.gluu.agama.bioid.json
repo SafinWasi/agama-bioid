@@ -125,12 +125,13 @@
 					"comment": "",
 					"flowfilename": "",
 					"returnVariable": "{ userId: input.username}",
+					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Success"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 2424,
 				"y": 100
@@ -274,9 +275,9 @@
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1932,
@@ -741,7 +742,7 @@
 					"hasComment": true,
 					"comment": "",
 					"javaClassName": "",
-					"javaMethodName": "enrolled",
+					"javaMethodName": "isEnrolled",
 					"javaVariableName": "bioid",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
@@ -1479,8 +1480,8 @@
 		}
 	],
 	"viewport": {
-		"x": -319.86744414079544,
-		"y": 231.30327508862342,
-		"zoom": 0.5
+		"x": -1767.2210869724881,
+		"y": 328.9091185263935,
+		"zoom": 0.8657365655196583
 	}
 }
