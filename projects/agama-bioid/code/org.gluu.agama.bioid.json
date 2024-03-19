@@ -267,16 +267,16 @@
 					"inIterateBlock": false,
 					"assignments": [
 						{
-							"variableTypeCheck": true,
+							"variableTypeCheck": false,
 							"assignmentExpression": "{token:token, return_url: conf.host, state: \"abcdef\"}",
 							"assignedVariableName": "verify_token_map"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1932,
@@ -622,8 +622,8 @@
 			}
 		},
 		{
-			"width": 168,
-			"height": 120,
+			"width": 170,
+			"height": 123,
 			"id": "Agama-log-Node-3b7d213e-3f39-4f33-828c-a186d3f76f18",
 			"position": {
 				"x": 1595,
@@ -655,9 +655,9 @@
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1595,
