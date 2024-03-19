@@ -743,7 +743,7 @@
             let loader = new THREE.OBJLoader(manager);
             let material = new THREE.MeshLambertMaterial({transparent: false, opacity: 0.8});
 
-            loader.load('/bws/model/head.obj', function (head) {
+            loader.load('./model/head.obj', function (head) {
                 head.traverse(function (child) {
                     if (child instanceof THREE.Mesh) {
                         //   child.material = material;

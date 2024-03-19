@@ -1,5 +1,27 @@
 Flow org.gluu.agama.bioid
      Basepath ""
-RRF "bioid.ftlh" 
-it_vtlnx = {success:false, error: "Your error message here"}
+     Configs conf
+bioid = Call org.gluu.agama.bioid.BioIdService#new conf
+idp = Call org.gluu.agama.bioid.IdentityProcessor#new
+input = RRF "login.ftlh"
+login = Call idp authenticate input.username input.password
+When login is false 
+    it_vtlnx = {success:false, error: "Login failed"}
+    Finish it_vtlnx
+enrolled = Call bioid isEnrolled input.username
+When enrolled is false
+    Log input.username "is not enrolled"
+    token = Call bioid getBWSToken input.username "enroll"
+    enroll_token_map = {token:token, return_url: conf.host, state: "abcdef"}
+    enrollment_result = RRF "bioid.ftlh" enroll_token_map true
+    When enrollment_result.error is not null
+        it_vtlnx = {success:false, error: enrollment_result.error}
+        Finish it_vtlnx
+token = Call bioid getBWSToken input.username "verify"
+verify_token_map = {token:token, return_url: conf.host, state: "abcdef"}
+verification_result = RRF "bioid.ftlh" verify_token_map true
+When verification_result.error is null
+    success_map = {success:true, data: {userId: input.username}}
+    Finish success_map
+it_vtlnx = {success:false, error: verification_result.error}
 Finish it_vtlnx
