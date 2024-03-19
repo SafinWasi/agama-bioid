@@ -33,9 +33,10 @@
 					"returnVariable": "verification_error",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 2845,
 				"y": -199
@@ -80,7 +81,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -125,7 +127,8 @@
 					"returnVariable": "{ userId: input.username}",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Success"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -177,7 +180,8 @@
 				"handles": [
 					"Agama-when-Node-e32e599f-c6a3-4c2f-a7f6-c124fd751917.FAILURE",
 					"Agama-when-Node-e32e599f-c6a3-4c2f-a7f6-c124fd751917.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -221,7 +225,8 @@
 					"templatePath": "bioid.ftlh",
 					"asssignedVariableName": "verification_result",
 					"arguments": "verify_token_map true"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -268,7 +273,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -317,7 +323,8 @@
 						"\"verify\""
 					],
 					"nodeIcon": "material-symbols:code"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -359,7 +366,8 @@
 					"returnVariable": "enrollment_error",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -406,7 +414,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -458,7 +467,8 @@
 				"handles": [
 					"Agama-when-Node-b1203a56-d590-4c93-81e5-983023d45681.FAILURE",
 					"Agama-when-Node-b1203a56-d590-4c93-81e5-983023d45681.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -502,7 +512,8 @@
 					"templatePath": "bioid.ftlh",
 					"asssignedVariableName": "enrollment_result",
 					"arguments": "enroll_token_map true"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -549,7 +560,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -599,7 +611,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "token"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -609,8 +622,8 @@
 			}
 		},
 		{
-			"width": 170,
-			"height": 123,
+			"width": 168,
+			"height": 120,
 			"id": "Agama-log-Node-3b7d213e-3f39-4f33-828c-a186d3f76f18",
 			"position": {
 				"x": 1595,
@@ -638,12 +651,13 @@
 					"whenCondition": "WhenTrue",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "Not enrolled. Starting enrollment",
+					"logMessage": "\"Not enrolled. Starting enrollment\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1595,
@@ -689,7 +703,8 @@
 				"handles": [
 					"Agama-when-Node-dfd549f5-aa54-4d18-af03-bd012c1b6607.FAILURE",
 					"Agama-when-Node-dfd549f5-aa54-4d18-af03-bd012c1b6607.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -738,7 +753,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "enrolled"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -784,7 +800,8 @@
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Authentication failed"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -832,7 +849,8 @@
 				"handles": [
 					"Agama-when-Node-aec21abc-2a44-4443-953a-25fe645dc7d3.FAILURE",
 					"Agama-when-Node-aec21abc-2a44-4443-953a-25fe645dc7d3.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -882,7 +900,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "login"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -925,7 +944,8 @@
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "login.ftlh",
 					"asssignedVariableName": "input"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -972,7 +992,8 @@
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "idp"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -1021,7 +1042,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "bioid"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -1457,8 +1479,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2155,
-		"y": 359,
-		"zoom": 1
+		"x": -319.86744414079544,
+		"y": 231.30327508862342,
+		"zoom": 0.5
 	}
 }
