@@ -23,8 +23,7 @@
                 "appSecret": "",
                 "storage": "",
                 "partition": ""
-            },
-            "org.gluu.agama.bioid.enrollment": {}
+            }
         },
         "name": "agama-bioid"
     }
