@@ -6,22 +6,21 @@ idp = Call org.gluu.agama.bioid.IdentityProcessor#new
 input = RRF "login.ftlh" 
 login = Call idp authenticate input.username input.password
 When login is false
-     it_qxsjo = {success:false, error: "Authentication failed"}
-     Finish it_qxsjo
+     it_jbprl = {success:false, error: "Authentication failed"}
+     Finish it_jbprl
 enrolled = Call bioid isEnrolled input.username
 When enrolled is false
-     Log "@info Not enrolled. Starting enrollment"
-     token = Call bioid getBWSToken input.username "enroll"
-     enroll_token_map = {token:token, return_url: conf.host, state: "abcdef"}
-     enrollment_result = RRF "bioid.ftlh" enroll_token_map true
-     When enrollment_result.error is not null
-          enrollment_error = {success: false, error: enrollment_result.error}
-          Finish enrollment_error
+     username = input.username
+     return_url = conf.host
+     enrollment_result = Trigger org.gluu.agama.bioid.enrollment bioid return_url username
+     When enrollment_result.success is false
+          it_gxlqu = {success:false, error: "Enrollment failed"}
+          Finish it_gxlqu
 Call bioid getBWSToken input.username "verify"
 verify_token_map = {token:token, return_url: conf.host, state: "abcdef"}
 verification_result = RRF "bioid.ftlh" verify_token_map true
 When verification_result.error is null
-     it_qwhke = {success:true, data: { userId: input.username}}
-     Finish it_qwhke
+     it_doppx = {success:true, data: { userId: input.username}}
+     Finish it_doppx
 verification_error = {success:true, data: {userId: input.username}}
 Finish verification_error
