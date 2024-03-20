@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Agama-start-Flow-463c897a-5f56-4cb1-9139-baed669f1d0a",
+    "type": "start",
+    "sourcePosition": "right",
+    "data": {
+      "id": "Agama-start-Flow-463c897a-5f56-4cb1-9139-baed669f1d0a",
+      "type": "Agama-start-Flow",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "inRepeatBlock": false,
+      "agamaData": {
+        "id": "Agama-start-Flow-463c897a-5f56-4cb1-9139-baed669f1d0a",
+        "type": "Agama-start-Flow",
+        "displayName": "Enrollment",
+        "hasComment": true,
+        "comment": "",
+        "isTopLevelFlow": true,
+        "basepath": "",
+        "configParams": "{}",
+        "nodeIcon": "material-symbols:line-start-square",
+        "timeout": "",
+        "inputs": "",
+        "configs": "",
+        "flowname": "org.gluu.agama.bioid.enrollment"
+      }
+    },
+    "position": {
+      "x": 30,
+      "y": 30
+    }
+  }
+]
