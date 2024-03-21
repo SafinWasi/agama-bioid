@@ -3,24 +3,36 @@ Flow org.gluu.agama.bioid
      Configs conf
 bioid = Call org.gluu.agama.bioid.BioIdService#new conf
 idp = Call org.gluu.agama.bioid.IdentityProcessor#new 
-input = RRF "login.ftlh" 
-login = Call idp authenticate input.username input.password
-When login is false
-     it_jbprl = {success:false, error: "Authentication failed"}
-     Finish it_jbprl
-enrolled = Call bioid isEnrolled input.username
+username = RRF "username.ftlh" 
+userData = Call idp accountFromUsername username.username
+When userData.empty is true
+     it_bbvki = {success:false, error: "User not found"}
+     Finish it_bbvki
+enrolled = Call bioid isEnrolled username.username
 When enrolled is false
-     username = input.username
+     uid = username.username
      return_url = conf.host
-     enrollment_result = Trigger org.gluu.agama.bioid.enrollment bioid return_url username
+     enrollment_result = Trigger org.gluu.agama.bioid.enrollment bioid return_url uid
      When enrollment_result.success is false
-          it_gxlqu = {success:false, error: "Enrollment failed"}
-          Finish it_gxlqu
-Call bioid getBWSToken input.username "verify"
+          it_zccdx = {success:false, error: "Enrollment failed, please try again."}
+          Finish it_zccdx
+     password = RRF "password.ftlh" 
+     authentication = Call idp authenticate username.username password.password
+     When authentication is true
+          finish_result = {success:true, userId: username.username}
+          Finish finish_result
+     it_ijcwv = {success:false, error: "Authentication failed"}
+     Finish it_ijcwv
+token = Call bioid getBWSToken username.username "verify"
 verify_token_map = {token:token, return_url: conf.host, state: "abcdef"}
 verification_result = RRF "bioid.ftlh" verify_token_map true
 When verification_result.error is null
-     it_doppx = {success:true, data: { userId: input.username}}
-     Finish it_doppx
-verification_error = {success:true, data: {userId: input.username}}
-Finish verification_error
+     finish_result = {success:true, userId: username.username}
+     Finish finish_result
+password = RRF "password.ftlh" 
+authentication = Call idp authenticate username.username password.password
+When authentication is true
+     it_xcdnk = {success:true, data: { userId: username.username}}
+     Finish it_xcdnk
+it_guppj = {success:false, error: "Both factors failed"}
+Finish it_guppj
