@@ -1,2 +1,12 @@
 Flow org.gluu.agama.bioid.enrollment
      Basepath ""
+     Inputs bioid return_url username
+Log "@info " Starting enrollment
+token = Call bioid getBWSToken username "enroll"
+enroll_token_map = {token:token, return_url: return_url, state: "abcdef"}
+enrollment_result = RRF "bioid.ftlh" enroll_token_map true
+When enrollment_result.error is not null
+     enrollment_error = {success: false, error: enrollment_result.error}
+     Finish enrollment_error
+it_ythpg = {success:true, data: { userId: username}}
+Finish it_ythpg
