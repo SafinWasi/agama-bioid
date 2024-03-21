@@ -37,9 +37,10 @@
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Finish success"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1280,
@@ -80,7 +81,8 @@
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Finished with error"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -127,7 +129,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -179,7 +182,8 @@
 				"handles": [
 					"Agama-when-Node-a3e8aa1b-a09a-4315-a69b-60368fb1a375.FAILURE",
 					"Agama-when-Node-a3e8aa1b-a09a-4315-a69b-60368fb1a375.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -223,7 +227,8 @@
 					"templatePath": "bioid.ftlh",
 					"asssignedVariableName": "enrollment_result",
 					"arguments": "enroll_token_map true"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -270,7 +275,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -320,7 +326,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "token"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -359,16 +366,17 @@
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
-					"logMessage": "Starting enrollment",
+					"logMessage": "\"Starting enrollment\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"hasSuccess": "",
 					"hasFailure": "",
 					"hasNoRepeat": false,
 					"hasRepeat": false
-				}
+				},
+				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 230,
@@ -559,8 +567,8 @@
 		}
 	],
 	"viewport": {
-		"x": -640,
-		"y": 156,
+		"x": 10,
+		"y": 15,
 		"zoom": 1
 	}
 }
