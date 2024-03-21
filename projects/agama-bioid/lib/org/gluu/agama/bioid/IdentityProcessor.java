@@ -66,4 +66,21 @@ public class IdentityProcessor implements IdentityProcessorInterface {
         }
         return Collections.emptyMap();
     }
+
+    private static User getUser(String attributeName, String value) {
+        UserService userService = CdiUtil.bean(UserService.class);
+        return userService.getUserByAttribute(attributeName, value, true);
+    }
+
+    private static String getSingleValuedAttr(User user, String attribute) {
+
+        Object value = null;
+        if (attribute.equals(UID)) {
+            // user.getAttribute("uid", true, false) always returns null :(
+            value = user.getUserId();
+        } else {
+            value = user.getAttribute(attribute, true, false);
+        }
+        return value == null ? null : value.toString();
+    }
 }
