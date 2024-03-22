@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Agama-start-Flow-a05a7149-8962-4f3a-8c3c-3a34937761a9",
+    "type": "start",
+    "sourcePosition": "right",
+    "data": {
+      "id": "Agama-start-Flow-a05a7149-8962-4f3a-8c3c-3a34937761a9",
+      "type": "Agama-start-Flow",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "inRepeatBlock": false,
+      "agamaData": {
+        "id": "Agama-start-Flow-a05a7149-8962-4f3a-8c3c-3a34937761a9",
+        "type": "Agama-start-Flow",
+        "displayName": "Authenticate",
+        "hasComment": true,
+        "comment": "",
+        "isTopLevelFlow": true,
+        "basepath": "",
+        "configParams": "{}",
+        "nodeIcon": "material-symbols:line-start-square",
+        "timeout": "",
+        "inputs": "",
+        "configs": "",
+        "flowname": "org.gluu.agama.bioid.authenticate"
+      }
+    },
+    "position": {
+      "x": 30,
+      "y": 30
+    }
+  }
+]
