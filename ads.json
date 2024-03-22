@@ -23,7 +23,8 @@
                 "appSecret": "",
                 "storage": "",
                 "partition": ""
-            }
+            },
+            "org.gluu.agama.bioid.authenticate": {}
         },
         "name": "agama-bioid"
     }
