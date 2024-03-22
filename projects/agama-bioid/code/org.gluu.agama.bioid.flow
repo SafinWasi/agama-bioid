@@ -6,33 +6,8 @@ idp = Call org.gluu.agama.bioid.IdentityProcessor#new
 username = RRF "username.ftlh" 
 userData = Call idp accountFromUsername username.username
 When userData.empty is true
-     it_bbvki = {success:false, error: "User not found"}
-     Finish it_bbvki
+     it_fyuiw = {success:false, error: "User not found"}
+     Finish it_fyuiw
 enrolled = Call bioid isEnrolled username.username
-When enrolled is false
-     uid = username.username
-     return_url = conf.host
-     enrollment_result = Trigger org.gluu.agama.bioid.enrollment bioid return_url uid
-     When enrollment_result.success is false
-          it_zccdx = {success:false, error: "Enrollment failed, please try again."}
-          Finish it_zccdx
-     password = RRF "password.ftlh" 
-     authentication = Call idp authenticate username.username password.password
-     When authentication is true
-          finish_result = {success:true, userId: username.username}
-          Finish finish_result
-     it_ijcwv = {success:false, error: "Authentication failed"}
-     Finish it_ijcwv
-token = Call bioid getBWSToken username.username "verify"
-verify_token_map = {token:token, return_url: conf.host, state: "abcdef"}
-verification_result = RRF "bioid.ftlh" verify_token_map true
-When verification_result.error is null
-     finish_result = {success:true, userId: username.username}
-     Finish finish_result
-password = RRF "password.ftlh" 
-authentication = Call idp authenticate username.username password.password
-When authentication is true
-     it_xcdnk = {success:true, data: { userId: username.username}}
-     Finish it_xcdnk
-it_guppj = {success:false, error: "Both factors failed"}
-Finish it_guppj
+it_hxhmi = {success:false, error: "Your error message here"}
+Finish it_hxhmi
