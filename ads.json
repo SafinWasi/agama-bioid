@@ -14,7 +14,9 @@
             "jans",
             "biometrics"
         ],
-        "noDirectLaunch": [],
+        "noDirectLaunch": [
+            "org.gluu.agama.bioid.authenticate"
+        ],
         "configs": {
             "org.gluu.agama.bioid": {
                 "host": "https://<hostname>/jans-auth/fl/callback",
